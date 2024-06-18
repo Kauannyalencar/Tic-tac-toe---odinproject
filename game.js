@@ -58,7 +58,6 @@ square.forEach((place, i) => {
       gameBoard[i] = currentPlayer.mark;
       place.textContent = gameBoard[i]
       gamePlay()
-      console.log(gameActive);
       changePlayer()
     } else if (!gameActive) {
       return;
@@ -78,8 +77,10 @@ const gamePlay = () => {
 
 function resetGame() {
   gameBoard.fill('')
+  console.log(gameBoard);
+  winnerPara.textContent = `Player ${player.textContent}'s turn`
   square.forEach(item => item.textContent = '')
-  
+  gamePlay()
 
 }
 
