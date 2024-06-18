@@ -1,6 +1,7 @@
 const square = document.querySelectorAll(".square")
 const player = document.querySelector(".word");
 const winnerPara = document.querySelector(".winner");
+const playAgain = document.querySelector(".play-again")
 let gameActive = false;
 const modal = document.querySelector(".modal")
 const p1 = document.querySelector("input#p1")
@@ -13,7 +14,6 @@ let currentPlayer = {
   mark: "X"
 
 }
-
 
 const gameBoard = Array(9).fill('')
 
@@ -37,6 +37,12 @@ function checkWinner(currentPl) {
     if (gameBoard[a] === currentPl && gameBoard[b] === gameBoard[a] && gameBoard[b] === gameBoard[c]) {
       gameActive = false
       player.textContent = ''
+      playAgain.removeAttribute('disabled')
+      playAgain.addEventListener("click",()=>{
+        console.log("click");
+        window.location.reload()
+      })
+      
       return true
     }
   }
@@ -74,9 +80,8 @@ const gamePlay = () => {
 function resetGame() {
   gameBoard.fill('')
   square.forEach(item => item.textContent = '')
-  const playAgain = document.createElement('button')
-  endScreen.appendChild(playAgain)
-  playAgain.addEventListener("click", location.reload())
+  
+
 }
 
 modal.addEventListener("submit", (e) => {

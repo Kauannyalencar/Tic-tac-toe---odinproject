@@ -62,6 +62,26 @@
     margin-right: 10px;
 }
 
+button:disabled{
+    background-color: #9c9c9f;
+}
+
+.champ{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #38383a;
+    background-color: #b0c7c3;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #49625d;
+}
+
 .modal {
     position: absolute;
     padding: 20px;
@@ -108,5 +128,5 @@ form > input{
     background-color: #2d2d65;
     position: absolute;
     top: 0;
-
 }
+
