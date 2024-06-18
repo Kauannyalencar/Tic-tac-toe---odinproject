@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <main class="container">
+    <div class="title">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <section class="playerDisplay">
+        <p class="winner">Player <span class="word player">X</span>'s turn</p>
+    </section>
+    <section class="game">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+    </section>
+    <div class="modal">
+        <h1>Players</h1>
+        <form action="">
+            <input id="p1" type="text" placeholder="Your name">
+            <input id="p2" type="text" placeholder="You enemy's name">
+        <button class="submit-btn">Play Game</button>
+        </form>
+    </div>
+
+    <section class="btns-end">
+        <button class="reset">Reset</button>
+    </section>
+   </main>
+    <script src="game.js"></script>
+</body>
+</html>
