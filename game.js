@@ -55,7 +55,6 @@ square.forEach((place, i) => {
       console.log(gameActive);
       changePlayer()
     } else if (!gameActive) {
-      resetGame()
       return;
     } else {
       alert("Ocupado")
